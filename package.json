@@ -1,0 +1,22 @@
+{
+  "name": "men_stack",
+  "version": "2.0.0",
+  "description": "men stack",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DERRICKSONNDAMBUKI/sensei_men_stack.git"
+  },
+  "author": "Ricky Sensei",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DERRICKSONNDAMBUKI/sensei_men_stack/issues"
+  },
+  "homepage": "https://github.com/DERRICKSONNDAMBUKI/sensei_men_stack#readme",
+  "dependencies": {
+    "express": "^4.17.2"
+  }
+}
