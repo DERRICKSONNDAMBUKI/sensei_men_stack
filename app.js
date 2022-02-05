@@ -2,6 +2,8 @@ const express = require("express");
 const path = require("path");
 
 const app = express(); //calls express function start new express app
+
+// middlewares
 app.use(express.static("public"));
 
 // routing
