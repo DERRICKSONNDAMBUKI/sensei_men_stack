@@ -1,25 +1,15 @@
-const http = require('http')
-const fs  = require('fs')
+const express = require('express');
 
-// files
-const homePage = fs.readFileSync('./index.html')
-const aboutPage = fs.readFileSync('./about.html')
-const contactPage = fs.readFileSync('./contact.html')
-const notFound = fs.readFileSync('./notfound.html')
+const app = express() //calls express function start new express app
 
-const server = http.createServer((req,res)=>{
-    console.log(req.url);
-    // res.end('Hello Sensei!')
-    if (req.url === '/about') {
-        res.end(aboutPage)
-    } else if(req.url==='/contact'){
-        res.end(contactPage)
-    }else if (req.url==='/') {
-        res.end(homePage)
-    } else {
-        res.writeHead(404)
-        res.end(notFound)
-    }
+app.get('/',(req,res)=>{
+    res.json({
+        name:'Sensei'
+    })
 })
 
-server.listen(3000)
+
+
+app.listen(3000,()=>{
+    console.log('app listening at port 3000');
+})
