@@ -2,10 +2,11 @@ const mongoose = require("mongoose");
 
 const BlogPost = require("./models/BlogPost");
 
-mongoose.connect("mongodb://localhost/my_database", {
-  userNewUrlParser: true,
-});
+// connect to mongoDB
+// if the db does not exist it will be create automatically
+mongoose.connect("mongodb://localhost/my_database");
 
+// create a document into the BlogPost collection
 BlogPost.create(
   {
     title: "The Mythbuster’s Guide to Saving Money on Energy Bills",
