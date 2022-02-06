@@ -16,3 +16,30 @@ BlogPost.create(
     console.log(error, blogPost);
   }
 );
+
+// query filter
+BlogPost.find(
+  {
+    title: "The Mythbuster’s Guide to Saving Money on Energy Bills",
+  },
+  (error, blogspot) => {
+    console.log(error, blogspot);
+  }
+);
+
+// using unique id
+var id = "5cb436980b33147489eadfbb";
+BlogPost.findById(id, (error, blogspot) =>{
+console.log(error,blogspot)
+})
+
+// updating records/documents
+var id = "61ffb7bda1663aeae6fd0954";
+BlogPost.findByIdAndUpdate(id,{
+    title:'updated title'
+},(error,blogPost)=>{
+    console.log(error,blogPost);
+})
+
+// deleting single record
+var id = 61ffb7bda1663aeae6fd0954

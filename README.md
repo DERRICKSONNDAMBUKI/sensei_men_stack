@@ -75,3 +75,6 @@ $ sudo apt-get purge mongodb-org*
 $ sudo rm -r /var/log/mongodb
 $ sudo rm -r /var/lib/mongodb
 ```
+
+### for more querying 
+https://docs.mongodb.com/manual/tutorial/query-documents/
