@@ -17,6 +17,7 @@ mongoose.connect('mongodb://localhost/my_databse',{
 })
 
 // routing
+// get
 app.get("/", (req, res) => {
 //   res.sendFile(path.resolve(__dirname, "pages/index.html"));
 res.render('index')
@@ -35,6 +36,12 @@ res.render('post')
 });
 app.get('/posts/new',(req,res)=>{
   res.render('create')
+})
+
+// post
+app.post('/posts/store',(req,res)=>{
+  console.log(req.body);
+  res.redirect('/')
 })
 
 app.listen(3000, () => {
