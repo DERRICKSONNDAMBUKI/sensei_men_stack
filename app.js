@@ -33,6 +33,9 @@ app.get("/post", (req, res) => {
 //   res.sendFile(path.resolve(__dirname, "pages/post.html"));
 res.render('post')
 });
+app.get('/posts/new',(req,res)=>{
+  res.render('create')
+})
 
 app.listen(3000, () => {
   console.log("app listening at port 3000");

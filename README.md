@@ -78,3 +78,22 @@ $ sudo rm -r /var/lib/mongodb
 
 ### for more querying 
 https://docs.mongodb.com/manual/tutorial/query-documents/
+
+### install mongo-express 
+```
+npm install -g mongo-express
+```
+By default config.default.js is used where the basic access authentication is admin:pass. This is obviously not safe, and there are warnings in the console.
+
+If you installed it globally, you can immediately start mongo-express like this:
+```
+mongo-express --url mongodb://127.0.0.1:27017
+```
+Or if you want to use it as an administrator:
+```
+mongo-express --admin --url mongodb://127.0.0.1:27017
+```
+For help on configuration options:
+```
+mongo-express --help
+```
