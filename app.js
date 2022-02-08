@@ -44,7 +44,7 @@ app.get('/posts/new',(req,res)=>{
 // post
 app.post('/posts/store',async (req,res)=>{
   console.log(req.body);
-  res.redirect('/')
+  await res.redirect('/')
 })
 
 app.listen(3000, () => {
