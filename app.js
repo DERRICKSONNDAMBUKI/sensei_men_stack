@@ -2,6 +2,8 @@ const express = require("express");
 const ejs = require('ejs');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
+const BlogPost = require("./models/BlogPost");
+const { create } = require("./models/BlogPost");
 
 
 const app = express(); //calls express function start new express app
@@ -44,7 +46,10 @@ app.get('/posts/new',(req,res)=>{
 // post
 app.post('/posts/store',async (req,res)=>{
   console.log(req.body);
-  await res.redirect('/')
+  BlogPost.create(req.body,(error,blogpost)=>{
+    await res.redirect('/')
+  })
+  
 })
 
 app.listen(3000, () => {
