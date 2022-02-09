@@ -46,9 +46,9 @@ app.get('/posts/new',(req,res)=>{
 // post
 app.post('/posts/store',async (req,res)=>{
   console.log(req.body);
-  BlogPost.create(req.body,(error,blogpost)=>{
-    await res.redirect('/')
-  })
+  BlogPost.create(req.body)
+  await res.redirect('/')
+  
   
 })
 
